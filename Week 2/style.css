@@ -1,0 +1,28 @@
+body {
+    background-color: #91ff00;
+    font-size: 24px;
+    font-family: 'Climate Crisis';
+
+}
+h1 {
+    background-color: white;
+}
+
+#myElement {
+    border: 4px solid #FFFFFF;
+    font-size: 2em;
+    background-color: yellow;
+    padding: 10px;
+    display: inline-block;
+}
+#nestedElement{
+    font-size:1rem;
+    border:5px solid blue;
+}
+
+
+.specialClass {
+    position: relative;
+    top: 10px;
+    left:10px;
+}
