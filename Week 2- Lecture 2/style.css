@@ -1,0 +1,67 @@
+body {
+    background-image: linear-gradient(to right, #478dfe 20%, #2cc8f8, #ca4cd2, #fe5c69);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+#loginSection {
+    background-color: white;
+    width: 75%;
+    height: 800px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 20px;
+    box-shadow: 0px 9px 20px 10px #0000007d;
+}
+
+#customLogo {
+    height: 150px;
+    display:block;
+    margin:auto;
+    position: relative;
+    top: 40px;
+}
+
+#customHeading {
+    margin-top: 50px;
+    text-align: center;
+    color: #478dfe;
+    font-size: 40px;
+}
+#customDescription {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+#customForm {
+    width: 50%;
+    margin: auto;
+}
+
+input[type=text], input[type=password] {
+    font-size: 1em;
+    height:30px;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    border: 2px solid #478dfe;
+    border-radius: 10px;
+}
+
+#customButton {
+    margin-top: 30px;
+    border: none;
+    padding: 10px 80px;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: #478dfe;
+    color: white;
+    width: 100%;
+    
+}
+
+#customLink {
+    text-decoration: none;
+    color: #478dfe;
+}
