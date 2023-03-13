@@ -45,8 +45,15 @@ input[type=text], input[type=password] {
     width: 100%;
     padding: 10px;
     display: block;
-    border: 2px solid #478dfe;
-    border-radius: 10px;
+    border: none;
+    background:rgb(221, 221, 221);
+    transition-property: border-bottom;
+    transition-duration: 5s;
+    transition-timing-function: ease-in;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    border-bottom: 10px solid #478dfe;
 }
 
 #customButton {
@@ -58,7 +65,12 @@ input[type=text], input[type=password] {
     background-color: #478dfe;
     color: white;
     width: 100%;
-    
+    transition: width 2s, background-color 0.5s;
+}
+
+#customButton:hover {
+    width: 80%;
+    background-color: red;
 }
 
 #customLink {

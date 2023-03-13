@@ -1,0 +1,119 @@
+body  {
+    background-color: dodgerblue;
+}
+
+/* LOGO ANIMATION: Animation 1 */
+#customLogo
+{
+    display:block;
+    width: 100px;
+    height: 100px;
+    margin:auto;
+    margin-top: 20%;
+    animation: logoAnimation;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: 2;
+}
+
+@keyframes logoAnimation {
+    0% {
+        width: 100px;
+        height:100px;
+    }
+    25% {
+        width: 400px;
+        height:400px;
+    }
+    50% {
+        width: 100px;
+        height:100px;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes circlingAnimation {
+    0% {
+        top:0px;
+        left:0px;
+        background-color: red;
+    }
+    25%{
+        top:0px;
+        left: 800px;
+        background-color: yellow;
+    }
+    50% {
+        top:800px;
+        left:800px;
+        background-color: pink;
+    }
+    75% {
+        top:800px;
+        left:0px;
+        background-color: black;
+    }
+    100% {
+        top:800px;
+        left:0px;
+        background-color: orange;
+    }
+}
+
+#customDiv {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    animation: circlingAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+
+#loaderDiv {
+    width: 0px;
+    height: 20px;
+    position: relative;
+    top:0px;
+    left:0px;
+    background-color:white;
+    animation: loadingAnimation;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes loadingAnimation {
+    from {
+        width:0px;
+    }
+    to {
+        width: 500px;
+    }
+}
+
+
+/** Transition properties examples */
+/* #customBtn {
+    padding: 30px 10px;
+    background-color: white;
+    transition-property: padding;
+    transition-duration: 2s;
+    transition-delay: 3s;
+}
+
+#customBtn:hover {
+    padding: 30px 80px;
+    background-color: blue;
+    border-radius:50px;
+} */
