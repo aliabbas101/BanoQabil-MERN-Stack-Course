@@ -1,0 +1,14 @@
+#container {
+    height: 100vh;
+
+    background-color: dodgerblue;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.customDiv {
+    background-color: white;
+    border: 2px solid black;
+
+}

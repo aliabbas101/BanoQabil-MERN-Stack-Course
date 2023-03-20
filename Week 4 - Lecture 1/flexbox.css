@@ -1,0 +1,55 @@
+body {
+    font-size: 40px;
+
+}
+
+#container {
+    height: 100vh;
+    background-color: dodgerblue;
+    display: flex;
+    flex-flow: row wrap;
+
+    /** This property only works on main axis */
+    justify-content: center; 
+    
+    /** This property only works on cross axis */
+    align-items: stretch;
+
+}
+
+/* .customDiv {
+    background-color: white;
+    border: 2px solid black;
+    height: 500px;
+    width: 500px;
+
+} */
+
+.smallDiv {
+    background-color: white;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    flex: 1 1 50px; 
+}
+
+.mediumDiv {
+    background-color: white;
+    border: 2px solid black;
+    height: 300px;
+    width: 200px;
+}
+
+.largeDiv {
+    background-color: white;
+    border: 2px solid black;
+    height: 400px;
+    width: 200px;
+}
+
+.xlargeDiv {
+    background-color: white;
+    border: 2px solid black;
+    height: 500px;
+    width: 200px;
+}

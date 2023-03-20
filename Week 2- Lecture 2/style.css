@@ -77,3 +77,21 @@ input[type=text]:focus, input[type=password]:focus {
     text-decoration: none;
     color: #478dfe;
 }
+
+
+/** Media query defined for mobile devices which have maximum width upto 480 pixels */
+@media screen and (max-width: 520px) {
+    body  {
+        padding:0;
+        margin:0;
+        background-color: #2cc8f8;
+    }
+    #loginSection  {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin: 0;
+        box-shadow: none;
+
+    }
+}
