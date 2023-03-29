@@ -1,0 +1,10 @@
+.customContainer {
+    height: 100vh;
+}
+
+.myColumn {
+    background-color: red;
+    border:2px solid black;
+    color: white;
+    font-size: 24px;
+}

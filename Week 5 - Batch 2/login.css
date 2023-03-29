@@ -1,0 +1,7 @@
+body {
+    background-image: linear-gradient(to right, #b36cff, #4d7aff);
+}
+
+.customContainer{
+    height: 100vh;
+}
