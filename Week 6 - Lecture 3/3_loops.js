@@ -6,9 +6,55 @@
  * For loops are a way to repeat a block of code a specific number of times
  */
 
+/** Initialization; Condition ; Operation */
+// for(let i = 1; i <= 100; i+=2){
+//     console.log(i);
+// }
+
+
+
+
+
+// // 2 * 2 * 2 * 2 * 2
+// // 3 * 3 * 3 * 3 * 3
+// for(let i=1; i<=power; i++) {
+//     result = result *  number;
+// }
+
+// console.log(result);
+
+
+
+// Intialization; Condition
+
+// i++ Post increment
+
+// i = i +1
+// ++i Pre Increment
+// i= i+1
+
+// i-- Post decrement
+// --i Pre Decrement
+
+
 /** While Loops 
  * While loops are a way to repeat a block of code until a condition is met
 */
+
+
+// let number = 3;
+// let power = 5;
+// let result = 1;
+
+
+let i=1;
+
+do {
+    console.log("hello " + i);
+    i++;
+}
+while(i <= power);
+
 
 /** Do While Loops 
  * Do While loops are a way to repeat a block of code until a condition is met
