@@ -2,6 +2,12 @@
 
 /** WHat type of errors can be handled using exception handling ? */
 
+// let num = "2";
+// if(num % 2 === 0) {
+//     console.log("even number");
+// }
+
+
 /** Types of Errors
  * https://www.javatpoint.com/exception-handling-in-javascript#:~:text=In%20programming%2C%20exception%20handling%20is,exception%20and%20execute%20the%20code.
  */

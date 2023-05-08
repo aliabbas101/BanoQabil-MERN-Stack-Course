@@ -187,7 +187,6 @@ function counter(num, max) {
 counter(0, 1000);
 
 
-
 /** Arguments and return values */
 
 
