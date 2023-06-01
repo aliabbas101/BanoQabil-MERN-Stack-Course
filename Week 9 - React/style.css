@@ -1,0 +1,13 @@
+.myBtn {
+  color: white;
+  background-color: rgb(0, 0, 172);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.customInput {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(0, 0, 172);
+}
