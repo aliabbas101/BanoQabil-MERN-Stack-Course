@@ -67,10 +67,10 @@
 
 
 
-// let button = document.createElement("button");
-// button.innerHTML = "Click Me";
-// button.style = "background-color: black; color:white;";
-// button.id = "myButton";
+let button = document.createElement("button");
+button.innerHTML = "Click Me";
+button.style = "background-color: black; color:white;";
+button.id = "myButton";
 
 
 // let h1 = document.getElementsByName("myCustomHeading");
@@ -104,20 +104,77 @@
  */
 
 
-let select =  document.getElementById("cars");
+let input = document.getElementById("myInput");
 
-let option = document.createElement("option");
-option.value="volvo";
-option.text = "Volvo";
-
-
-select.appendChild(option);
-
-
-
-function clickMe() {
-    console.log(select.value);
+function checkInput() {
+    if(input.value === "ali@gmail.com"){
+        document.getElementById("myHeading").innerHTML = "Success";
+    }
+    else {
+        document.getElementById("myHeading").innerHTML = "Error: Invalid Email";
+    }
 }
+
+// function clickMe() {
+//     input.style.color = "white";
+//     input.style.backgroundColor = "red";
+//     input.value = "Hello world";
+// }
+
+let dropdown = document.getElementById("cars");
+    let heading = document.getElementById("myHeading");
+    
+    
+    let option = document.createElement("option");
+    option.value = "mehran";
+    option.text= "Mehran";
+
+    dropdown.add(option);
+
+function checkDropdown() {
+    let dropdown = document.getElementById("cars");
+    let heading = document.getElementById("myHeading");
+    
+    
+    let option = document.createElement("option");
+    option.value = "mehran";
+    option.text= "Mehran";
+
+    dropdown.add(option);
+
+
+
+    heading.innerHTML = dropdown.value;
+
+    if(dropdown.value === "audi") {
+        let image = document.createElement("img");
+        image.src = "https://media.ed.edmunds-media.com/audi/a4/2022/oem/2022_audi_a4_sedan_prestige-s-line_fq_oem_8_600.jpg";
+        image.id = dropdown.value;
+        
+        let myPictureDiv = document.getElementById("myPictureDiv");
+        myPictureDiv.appendChild(image);
+
+    
+    }
+    
+
+
+}
+
+// let select =  document.getElementById("cars");
+
+// let option = document.createElement("option");
+// option.value="volvo";
+// option.text = "Volvo";
+
+
+// select.appendChild(option);
+
+
+
+// function clickMe() {
+//     console.log(select.value);
+// }
 
 
 /** Event Handlers
