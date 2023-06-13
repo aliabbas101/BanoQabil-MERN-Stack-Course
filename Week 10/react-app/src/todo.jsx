@@ -1,56 +1,69 @@
 import Task from './task';
 
+/**
+ * ES6 Javascript
+ * ES Modules
+ */
 export default function Todo() {
   let tasks = [
     {
-      id: 0,
-      taskName: 'Attend MERN Class',
-      date: new Date().getDate(),
+      id: 1,
+      name: 'Nashta Karo',
+      date: new Date(),
       isCompleted: true,
     },
     {
-      id: 0,
-      taskName: 'Complete Assignment',
-      date: new Date().getDate(),
+      id: 2,
+      name: 'Bag Uthaao',
+      date: new Date(),
       isCompleted: false,
     },
     {
-      id: 0,
-      taskName: 'Attend Mid Exams',
-      date: new Date().getMinutes(),
+      id: 3,
+      name: 'Class Attend karo',
+      date: new Date(),
       isCompleted: false,
     },
     {
-      id: 0,
-      taskName: 'Create React Project',
-      date: new Date().getDate(),
+      id: 4,
+      name: 'Time zaya Karo',
+      date: new Date(),
       isCompleted: false,
     },
   ];
 
-  let renderedTasks = tasks.map((task) => {
-    return (
-      <Task
-        id={task.id}
-        taskName={task.taskName}
-        date={task.date}
-        isCompleted={task.isCompleted}
-      />
-    );
-  });
+  function addTask(event, taskName) {
+    event.preventDefault();
+    tasks.push({
+      id: tasks.length + 1,
+      name: 'Attend BanoQabil Web Development class',
+      date: new Date(),
+      isCompleted: false,
+    });
+
+    console.log(tasks);
+  }
 
   return (
     <>
       <div className="container">
-        <div className="card">
+        <div className="card mt-2">
           <div className="card-body">
-            <div className="d-flex">
-              <input type="text" className="form-control" />
-              <button className="mx-2 btn btn-success">Add</button>
+            <div className="row">
+              <form onSubmit={addTask}>
+                <div className="col-md-10">
+                  <input type="text" className="form-control" />
+                </div>
+                <div className="col-md-2">
+                  <input className="btn btn-primary d-inline" type="submit" />
+                </div>
+              </form>
             </div>
+            {tasks.map((task) => (
+              <Task taskName={task.name} id={task.id} />
+            ))}
           </div>
         </div>
-        {renderedTasks}
       </div>
     </>
   );
