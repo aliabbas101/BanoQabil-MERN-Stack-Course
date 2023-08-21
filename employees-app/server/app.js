@@ -1,20 +1,30 @@
-import bodyParser from "body-parser";
-import { express } from "express";
-import employeeRouter from "./employee";
+import bodyParser from 'body-parser';
+import { config } from 'dotenv';
+import express from 'express';
+
+import adminRouter from './routes/admin.routes.js';
+import mainRouter from './routes/main.routes.js';
+import { connectDB } from './config/db.js';
+import cors from 'cors';
+import multer from 'multer';
+
+var upload = multer();
 
 const app = express();
 
-/** Middlewares */
+config();
+connectDB();
+
 app.use(bodyParser.json());
-app.use(employeeRouter);
-
-app.get('/',(req, res)=>{
-    res.json({message: 'Success'});
-    res.end();
-});
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
-const PORT = 8080;
-app.listen(PORT, ()=>{
-    console.log("Started listening on PORT: ", PORT);
-});
+app.use(cors());
+
+app.use('/uploads', express.static('uploads'));
+app.use('/admin', adminRouter);
+app.use('/main', mainRouter);
+
+app.listen(process.env.PORT,()=>{
+    console.log("server started listening on PORT: ",process.env.PORT)
+})

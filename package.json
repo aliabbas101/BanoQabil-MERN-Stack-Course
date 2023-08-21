@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/aliabbas101/BanoQabil-MERN-Stack-Course/issues"
   },
-  "homepage": "https://github.com/aliabbas101/BanoQabil-MERN-Stack-Course#readme"
+  "homepage": "https://github.com/aliabbas101/BanoQabil-MERN-Stack-Course#readme",
+  "dependencies": {
+    "react-router-dom": "^6.15.0"
+  }
 }
