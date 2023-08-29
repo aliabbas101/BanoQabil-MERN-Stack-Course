@@ -13,11 +13,13 @@ export default function Posts() {
     getPosts().
     then((posts)=>{
       setPosts(posts);
+      setFilteredPosts(posts);
     }).
     catch(err=>{
 
     });
   }, []);
+
 
 
   function searchByKeyword(event) {
@@ -39,6 +41,9 @@ export default function Posts() {
     
   }
 
+  function resetPosts() {
+    setFilteredPosts(posts);
+  }
 
   return (
     <>
@@ -55,6 +60,7 @@ export default function Posts() {
             </div>
 
             <input type="text" className="mt-2 form-control" value={searchKeyword} placeholder="Search Keyword" onChange={searchByKeyword} />
+            <button className="btn btn-success" onClick={resetPosts}>Reset</button>
           </div>
         </div>
         <table className="table">
@@ -70,21 +76,7 @@ export default function Posts() {
             </tr>
           </thead>
           <tbody>
-            { (filteredPosts.length > 0) ? (filteredPosts.map((post)=>{
-              return <tr key={post._id}>
-              <th scope="row">{post._id}</th>
-              <td><img src={post.cover} height="100" /></td>
-              <td>{post.title}</td>
-              <td>{post.body}</td>
-              <td>{post.createdAt}</td>
-              <td>{post.updatedAt}</td>
-              <td>
-                <button  className="btn btn-primary me-2">Edit</button>
-                <button className="btn btn-danger">Delete</button>
-              </td>
-            </tr>
-            })):
-            (posts.map((post)=>{
+            { (filteredPosts.map((post)=>{
               return <tr key={post._id}>
               <th scope="row">{post._id}</th>
               <td><img src={post.cover} height="100" /></td>
