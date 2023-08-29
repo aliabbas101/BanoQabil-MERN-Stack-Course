@@ -3,9 +3,13 @@ import { postModel } from "../models/post.js";
 import { hash, compare } from 'bcrypt';
 import { userModel } from "../models/user.js";
 import jwt from 'jsonwebtoken';
+import multer from "multer";
 const mainRouter = Router();
 
 
+const upload= multer();
+
+mainRouter.use(upload.array());
 mainRouter.get('/posts', async(req,res)=>{
 
     try {
@@ -77,7 +81,9 @@ mainRouter.post('/register', async(req,res)=>{
 
 mainRouter.post('/login', async(req,res)=>{
     
+    console.log(req.body);
     const {username, password} = req.body;
+    
 
     
     try{

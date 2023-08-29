@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
-let apiUrl = "https://mern-stack-express-server.vercel.app/main/";
-let adminUrl = "https://mern-stack-express-server.vercel.app/admin/";
+let apiUrl = "http://localhost:8080/main/";
+let adminUrl = "http://localhost:8080/admin/";
 export const getPosts = async()=>{
 
     try{

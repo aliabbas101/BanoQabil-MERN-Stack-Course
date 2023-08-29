@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const apiUrl = "https://mern-stack-express-server.vercel.app/main/";
+const apiUrl = "http://localhost:8080/main/";
 
 export const login = async(formData)=>{
     try{
